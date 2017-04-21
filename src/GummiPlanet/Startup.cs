@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+using GummiPlanet.Models;
 
 namespace GummiPlanet
 {
@@ -25,7 +29,7 @@ namespace GummiPlanet
         {
             services.AddMvc();
             services.AddEntityFramework()
-                .AddDbContext<GummiWorldContext>(options =>
+                .AddDbContext<GummiPlanetDbContext>(options =>
                     options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
         }
 
