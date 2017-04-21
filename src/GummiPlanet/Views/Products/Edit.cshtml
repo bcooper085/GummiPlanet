@@ -1,28 +1,42 @@
 ﻿@model GummiPlanet.Models.Product
 @{
-    ViewData["Title"] = "To Do List";
+    ViewData["Title"] = "Gummi Planet";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
-<hr />
-<h4>Edit this task: @Html.DisplayFor(model => model.Name)</h4>
+<div class="row">
+    <div class="col-md-4">
+        <div class="bear-img">
+            <img src="~/img/bear.jpg" />
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="product-list">
+            <h2>Edit this Product: @Html.DisplayFor(model => model.Name)</h2>
+            <hr />
+        
+            @using (Html.BeginForm())
+            {
+                @Html.HiddenFor(model => model.ProductId)
 
-@using (Html.BeginForm())
-{
-    @Html.HiddenFor(model => model.ProductId)
+                @Html.LabelFor(model => model.Name)
+                <div class="form-info">
+                    @Html.TextBoxFor(model => model.Name)
+                </div>
 
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
+                @Html.LabelFor(model => model.Cost)
+                <div class="form-info">
+                    @Html.TextBoxFor(model => model.Cost)
+                </div>
 
-    @Html.LabelFor(model => model.Cost)
-    @Html.EditorFor(model => model.Cost)
-
-    @Html.LabelFor(model => model.Country)
-    @Html.EditorFor(model => model.Country)
-
-
-
-    <input type="submit" value="Save" />
-}
-<p>@Html.ActionLink("Back to list", "Index")</p>
+                @Html.LabelFor(model => model.Country)
+                <div class="form-info">
+                    @Html.TextBoxFor(model => model.Country)
+                </div>
+                <br />
+                <input type="submit" value="Save" class="btn btn-success" />
+            }
+            <p class="btn btn-primary" id="return">@Html.ActionLink("Back to list", "Index")</p>
+        </div>
+    </div>
+</div>

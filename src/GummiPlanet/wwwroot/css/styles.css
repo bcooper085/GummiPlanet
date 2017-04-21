@@ -1,7 +1,27 @@
-﻿body {
-    background-color: red;
+﻿li {
+    list-style: none;
 }
 
-li {
-    list-style: none;
+.home-img {
+    
+}
+
+.bear-img {
+    
+}
+
+.btn {
+    margin: 1%;
+}
+
+#return a {
+    color: white;
+}
+
+.navbar-header {
+    margin-left: 1%;
+}
+
+.navbar-right {
+    margin-right: 2%;
 }

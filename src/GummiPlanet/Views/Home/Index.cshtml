@@ -1,32 +1,18 @@
 ﻿@model GummiPlanet.Models.Product
 @{
-    ViewData["Title"] = "To Do List";
+    ViewData["Title"] = "Gummi Planet";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div id="myCarousel" class="carousel slide" data-ride="">
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <p>
-                You have stumbled upon the Gummies Planet
-            </p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="bear-img">
+            <img src="~/img/bear.jpg" />
         </div>
-        <div class="item">
-            <p>
-                Gummies Planet
-            </p>
+    </div>
+    <div class="col-md-8">
+        <div class="home-img">
+            <img src="http://morethanthecurve.com/wp-content/uploads/2010/12/gummy_bears.jpg">
         </div>
-        <div class="item">
-            <p>
-                You have stumbled
-            </p>
-        </div>
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </div>
 </div>

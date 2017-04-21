@@ -1,14 +1,25 @@
 ﻿@model GummiPlanet.Models.Product
 @{
-    ViewData["Title"] = "To Do List";
+    ViewData["Title"] = "Gummi Planet";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Details</h2>
-<hr />
-@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
-<br />
-@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost)
-<br />
-@Html.DisplayNameFor(model => model.Country): @Html.DisplayFor(model => model.Country)
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="bear-img">
+            <img src="~/img/bear.jpg" />
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="product-list">
+            <h2>Details</h2>
+            <hr />
+            @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+            <br />
+            @Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost)
+            <br />
+            @Html.DisplayNameFor(model => model.Country): @Html.DisplayFor(model => model.Country)
+            <br />
+            <p class="btn btn-primary" id="return">@Html.ActionLink("Back to list", "Index")</p>
+        </div>
+    </div>
+</div>

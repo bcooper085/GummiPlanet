@@ -1,21 +1,37 @@
 ﻿@model GummiPlanet.Models.Product
 @{
-    ViewData["Title"] = "To Do List";
+    ViewData["Title"] = "Gummi Planet";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Create</h2>
-<hr />
-<h4>Add a new Product</h4>
-@using (Html.BeginForm())
-{
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
 
-    @Html.LabelFor(model => model.Cost)
-    @Html.EditorFor(model => model.Cost)
-
-    @Html.LabelFor(model => model.Country)
-    @Html.EditorFor(model => model.Country)
-    <input type="submit" value="Add new product" />
-}
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="bear-img">
+            <img src="~/img/bear.jpg" />
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="product-list">
+            <h2>Add a new Product</h2>
+            <hr />
+            @using (Html.BeginForm())
+            {
+                @Html.LabelFor(model => model.Name)
+                <div class="form-info">
+                    @Html.TextBoxFor(model => model.Name)
+                </div>
+                    @Html.LabelFor(model => model.Cost)
+                <div class="form-info">
+                    @Html.TextBoxFor(model => model.Cost)
+                </div>
+                @Html.LabelFor(model => model.Country)
+                <div class="form-info">
+                    @Html.TextBoxFor(model => model.Country)
+                </div>
+                <br />
+                <input type="submit" value="Add new product" class="btn btn-success"/>
+            }
+            <p class="btn btn-primary" id="return">@Html.ActionLink("Back to list", "Index")</p>
+        </div>
+    </div>
+</div>
