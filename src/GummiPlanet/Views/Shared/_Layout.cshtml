@@ -10,10 +10,10 @@
 <body>
     <div class="navbar navbar-default">
         <div class="navbar-header">
-            <h2>@Html.ActionLink("GummiPlanet", "Index", "Home")</h2>
+            <h1 class="title">@Html.ActionLink("GummiPlanet", "Index", "Home")</h1>
         </div>
         <div class="navbar-text navbar-right">
-            <p>@Html.ActionLink("Products", "Index", "Products")</p>
+            <h4 class="product-tab">@Html.ActionLink("Products", "Index", "Products")</h4>
         </div>
     </div>
     <div class="container">
@@ -23,9 +23,29 @@
     </div>
     <div class="navbar navbar-default navbar-fixed-bottom">
         <div class="container">
-            <span class="navbar-text">
-                Something useful
-            </span>
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>Company</h4>
+                    <p>History</p>
+                    <p>International</p>
+                    <p>GummiPlanet USA</p>
+                    <p>Mumbo Jumbo</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Products</h4>
+                    <p>GummiPlanet</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Careers</h4>
+                    <p>Careers at GummiPlanet</p>
+                    <p></p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Contact and Services</h4>
+                    <p>FAQ</p>
+                    <p>Contact Information</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

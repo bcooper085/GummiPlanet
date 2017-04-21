@@ -2,12 +2,14 @@
     list-style: none;
 }
 
-.home-img {
-    
+.bear-img {
+    float: left;
 }
 
-.bear-img {
-    
+.title, .product-tab {
+    color: red;
+    font-family: 'Comic Sans MS';
+    text-shadow: 2px 2px #ff0000;
 }
 
 .btn {
@@ -24,4 +26,8 @@
 
 .navbar-right {
     margin-right: 2%;
+}
+
+.well img {
+    width: 100%;
 }
